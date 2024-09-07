@@ -25,7 +25,7 @@ Setting1.jpg<br /> <img src="docs/img_readme/Setting1.jpg" width="40%" /> <br />
 Rに設定するのは、コマンドを追加を押して上のほうのキーボードを選びRを選びます。
 </p>　
 <p>
-設定後は<br /> Setting2.jpg<br /> <img src="docs/img_readme/Setting0.jpg" width="50%" /><br /> のようになります。
+設定後は<br /> Setting2.jpg<br /> <img src="docs/img_readme/Setting2.jpg" width="50%" /><br /> のようになります。
 （開いてるところに機能追加してもかまいません。Shift+FNキーで一発表情ボタンとかにもできるはず）
 </p>　
 <p>
