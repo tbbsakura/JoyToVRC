@@ -40,8 +40,7 @@ TMARelay_v0.2.1MA.ZIP というのを使います。
 ModularAvatar があれば、TMARelay_MA_Both の prefab をアバター直下に入れるだけです。
 詳しい説明はこちら [https://tbbsakura.fc2.net/blog-entry-19.html](https://tbbsakura.fc2.net/blog-entry-19.html) 
 
-また、パイメニュー（さきほどの右SLで出せます）を出して、右スティックとトリガーで、
-上のOptionに入り、さらに、OSCを選びます。Enabledを有効にしたあと、同じところの左 Reset Configをしておきます。
+VRChat で当該アバターを呼び出したら、一度、パイメニュー（さきほどの右SLで出せます）を出して、右スティックとトリガーで、上のOptionに入り、さらに、OSCを選びます。Enabledを有効にしたあと、同じところの左 Reset Configをしておきます。
 
 ### ④JoyToVRCを起動して、Joy-Con Startを押し、しばし待ちます。
 　赤と青の直方体が出てきたら、スティックで動かしてみます。<br/>
