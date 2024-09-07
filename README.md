@@ -76,8 +76,9 @@ Copyright (c) 2024 Sakura(さくら) / tbbsakura<br/>
     SOFTWARE.
 
 以下のMITライセンスのソフトを一部改変して使っています
-[uOSC](https://github.com/hecomi/uOSC) [ライセンス情報](https://github.com/hecomi/uOSC/blob/master/LICENSE.md)
-[Joyconlib](https://github.com/Looking-Glass/JoyconLib) [ライセンス情報](https://github.com/Looking-Glass/JoyconLib/blob/master/LICENSE)
+
+- [uOSC](https://github.com/hecomi/uOSC) [ライセンス情報](https://github.com/hecomi/uOSC/blob/master/LICENSE.md)
+- [Joyconlib](https://github.com/Looking-Glass/JoyconLib) [ライセンス情報](https://github.com/Looking-Glass/JoyconLib/blob/master/LICENSE)
 
 
 ## Build
