@@ -16,8 +16,8 @@ VRChatをJoy-Conでデスクトップモードで遊ぶとき Joy-Con のIMUの�
 Setting0.jpg<br /><img src="docs/img_readme/Setting0.jpg" width="60%" /> <br />の1番のところのメニューから設定、コントローラーと進み次の画像のように設定します。<br />
 Setting1.jpg<br /> <img src="docs/img_readme/Setting1.jpg" width="40%" /> <br />
 <p>
-さらにSetting0.jpg の2番のところのコントローラーアイコンをクリックします。
-　Steam入力を有効にしてない場合は空白の多い画面に有効にするボタンがあるので有効にします。
+さらにSetting0.jpg の2番のところのコントローラーアイコンをクリックします。<br />
+Steam入力を有効にしてない場合は空白の多い画面に有効にするボタンがあるので有効にします。
 </p>
 <p>
 現在のボタンのレイアウト、というところで VRChat-Official Profile for Switch Pro Controller の 公式レイアウト、を選びます。（右の▶入って推奨の中の一番下）
