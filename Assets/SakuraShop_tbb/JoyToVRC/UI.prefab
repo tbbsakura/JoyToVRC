@@ -2553,13 +2553,13 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: L/R
       m_Image: {fileID: 0}
-    - m_Text: PAD RIGHT/A
+    - m_Text: "PAD A/RIGHT\u25B6"
       m_Image: {fileID: 0}
-    - m_Text: PAD DOWN/B
+    - m_Text: "PAD V/DOWN\u25BC"
       m_Image: {fileID: 0}
-    - m_Text: PAD LEFT/Y
+    - m_Text: "PAD Y/LEFT\u25C0"
       m_Image: {fileID: 0}
-    - m_Text: PAD UP/X
+    - m_Text: "PAD X/\u25B2"
       m_Image: {fileID: 0}
     - m_Text: SL
       m_Image: {fileID: 0}

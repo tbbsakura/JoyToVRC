@@ -33,7 +33,7 @@ namespace SakuraScript.JoyToVRC {
     {
         public string ipaddr = "127.0.0.1";
         public int port = 9000;
-        public int calibkey = 0;
+        public int calibkey = 4;
     }
 
     public class JoyToVRCUI : MonoBehaviour
