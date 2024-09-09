@@ -2559,7 +2559,7 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: "PAD Y/LEFT\u25C0"
       m_Image: {fileID: 0}
-    - m_Text: "PAD X/\u25B2"
+    - m_Text: "PAD X/UP\u25B2"
       m_Image: {fileID: 0}
     - m_Text: SL
       m_Image: {fileID: 0}

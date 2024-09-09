@@ -93,9 +93,9 @@ namespace SakuraScript.JoyToVRC {
 
         public void OnValueChangedDropDownCalibKey(Int32 value)
         {
-            Con1.CalibKey = value;
-            Con2.CalibKey = value;
-            _setting.calibkey = Con1.CalibKey;
+            Con1.CalibKeyIndex = value;
+            Con2.CalibKeyIndex = value;
+            _setting.calibkey = Con1.CalibKeyIndex;
         }
 
         public void OnToggleJoyConStart( bool isOn ) {

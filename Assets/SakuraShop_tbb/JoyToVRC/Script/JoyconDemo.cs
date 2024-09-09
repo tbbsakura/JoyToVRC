@@ -43,10 +43,10 @@ public class JoyconDemo : MonoBehaviour {
 	public bool IsLeft => joycons [jc_ind].isLeft;
 
     const int CALIB_KEY_PATTERN = 10;
-    int _calibKey = 0;
-    public int CalibKey {
-        get => _calibKey;
-        set => _calibKey = (value >= CALIB_KEY_PATTERN || value < 0 ) ? 0 : value;
+    int _calibKeyIndex = 0;
+    public int CalibKeyIndex {
+        get => _calibKeyIndex;
+        set => _calibKeyIndex = (value >= CALIB_KEY_PATTERN || value < 0 ) ? 0 : value;
     }
     public int [,] calibKeyPair = new int[CALIB_KEY_PATTERN,2] {
         { (int)Joycon.Button.SHOULDER_2 , (int)Joycon.Button.SHOULDER_2 }, // ZL/ZR
@@ -63,8 +63,7 @@ public class JoyconDemo : MonoBehaviour {
 
     public int GetCalibKey(bool isLeft)
     {
-        int idx = 0;
-        return calibKeyPair[ idx, isLeft ? 0:1];
+        return calibKeyPair[ CalibKeyIndex, isLeft ? 0:1];
     }
 
 	public void Attach() {
