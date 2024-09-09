@@ -42,6 +42,31 @@ public class JoyconDemo : MonoBehaviour {
 
 	public bool IsLeft => joycons [jc_ind].isLeft;
 
+    const int CALIB_KEY_PATTERN = 10;
+    int _calibKey = 0;
+    public int CalibKey {
+        get => _calibKey;
+        set => _calibKey = (value >= CALIB_KEY_PATTERN || value < 0 ) ? 0 : value;
+    }
+    public int [,] calibKeyPair = new int[CALIB_KEY_PATTERN,2] {
+        { (int)Joycon.Button.SHOULDER_2 , (int)Joycon.Button.SHOULDER_2 }, // ZL/ZR
+        { (int)Joycon.Button.SHOULDER_1 , (int)Joycon.Button.SHOULDER_1 }, // L/R
+        { (int)Joycon.Button.DPAD_RIGHT , (int)Joycon.Button.DPAD_RIGHT }, // RIGHT/A
+        { (int)Joycon.Button.DPAD_DOWN ,  (int)Joycon.Button.DPAD_DOWN }, // DOWN/B
+        { (int)Joycon.Button.DPAD_LEFT ,  (int)Joycon.Button.DPAD_LEFT }, // LEFT/Y
+        { (int)Joycon.Button.DPAD_UP , (int)Joycon.Button.DPAD_UP }, // UP/X 
+        { (int)Joycon.Button.SL , (int)Joycon.Button.SL },
+        { (int)Joycon.Button.SR , (int)Joycon.Button.SR },
+        { (int)Joycon.Button.MINUS , (int)Joycon.Button.PLUS }, // +/-
+        { (int)Joycon.Button.CAPTURE ,  (int)Joycon.Button.HOME }, // HOME/CAPTURE
+    };
+
+    public int GetCalibKey(bool isLeft)
+    {
+        int idx = 0;
+        return calibKeyPair[ idx, isLeft ? 0:1];
+    }
+
 	public void Attach() {
 		if (joycons.Count > jc_ind)
         {
@@ -83,15 +108,18 @@ public class JoyconDemo : MonoBehaviour {
 				transform.position = new UnityEngine.Vector3( 3, 0, 0 );;
 
 			// GetButtonDown checks if a button has been pressed (not held)
-            if (j.GetButtonDown(Joycon.Button.SHOULDER_2))
+			Joycon.Button calibKey = (Joycon.Button)GetCalibKey(j.isLeft);
+            if (j.GetButtonDown(calibKey) )
             {
-				Debug.Log ("Shoulder button 2 pressed");
+				Debug.Log ($"CalibKey {calibKey.ToString()} pressed");
 				// GetStick returns a 2-element vector with x/y joystick components
-				Debug.Log(string.Format("Stick x: {0:N} Stick y: {1:N}",j.GetStick()[0],j.GetStick()[1]));
+				//Debug.Log(string.Format("Stick x: {0:N} Stick y: {1:N}",j.GetStick()[0],j.GetStick()[1]));
             
 				// Joycon has no magnetometer, so it cannot accurately determine  its yaw value. Joycon.Recenter allows the user to reset the yaw value.
 				j.Recenter ();
 			}
+
+#if JOYCONLIB_SAMPLE_CODE_AVAILABLE
 			// GetButtonDown checks if a button has been released
 			if (j.GetButtonUp (Joycon.Button.SHOULDER_2))
 			{
@@ -103,7 +131,6 @@ public class JoyconDemo : MonoBehaviour {
 				Debug.Log ("Shoulder button 2 held");
 			}
 
-#if JOYCONLIB_USE_RUMBLE
 			if (j.GetButtonDown (Joycon.Button.DPAD_DOWN)) {
 				Debug.Log ("Rumble");
 
@@ -128,7 +155,7 @@ public class JoyconDemo : MonoBehaviour {
 
             orientation = UnityEngine.Quaternion.Euler(_RotationOffset) * j.GetVector();
 
-			if (j.GetButton(Joycon.Button.DPAD_UP)){
+			if (j.GetButton(calibKey)){
 				gameObject.GetComponent<Renderer>().material.color = Color.yellow;
 			} else{
 				gameObject.GetComponent<Renderer>().material.color = j.isLeft ? Color.red : Color.blue;
