@@ -38,7 +38,7 @@ Rに設定するのは、コマンドを追加を押して上のほうのキー�
 ## JoyToVRC で 手を動かす方法
 ### ③アバターは TMARelay で手を動かせるアバターにしておきます。
   TMARelay はこちら [https://booth.pm/ja/items/5056237](https://booth.pm/ja/items/5056237) <br />
-TMARelay_v0.2.1MA.ZIP というのを使います。
+TMARelay_v0.3.0MA.ZIP (v0.2.1以降ならoK)を使います。
 
 ModularAvatar があれば、TMARelay_MA_Both の prefab をアバター直下に入れるだけです。
 詳しい説明はこちら [https://tbbsakura.fc2.net/blog-entry-19.html](https://tbbsakura.fc2.net/blog-entry-19.html) 
